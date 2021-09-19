@@ -7,10 +7,10 @@ export default class Navbar extends Component {
 
     render() {
         return <nav className="nav">
-            <div className="nav-logo">
+            <div className="navLogo">
                 <img src={this.props._logoUrl} alt="logo" />
             </div>
-            <ul class="navbar">
+            <ul class="navMenu">
                 {
                     this.props._navMenu.map(item => {
                         return <li className="navbar--link"><a href="#">{item}</a></li>;

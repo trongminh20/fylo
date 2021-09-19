@@ -1,25 +1,37 @@
-import { Component } from "react";
-import Button from "./Components/Button";
+import React, { Component } from "react";
 import Navbar from "./Components/Navbar";
 import Header from "./Components/Header";
-import Block from "./Components/Block";
+import Testimonial from "./Components/Testimonial";
+import Services from "./Components/Services";
 import Footer from "./Components/Footer";
-
-
+import Productive from "./Components/Productive";
 
 export default class App extends Component {
     constructor(props) {
         super(props);
     }
-    content = "this is the content sample";
+    menu = ["Feature", "Team", "Sing In"];
+    _ftMenu = [
+        "About Us",
+        "Jobs",
+        "Press",
+        "Blog",
+        "Contact Us",
+        "Terms",
+        "Privacy"
+    ];
     render() {
-        return <Block _title={"Block title"}
-            _content={this.content}
-            _subtitle={"true"}
-            _subHeader={"subtitle content"}
-            _button={true}
-            _btnValue={"button"}
-            _form={true} />
+        return (
+            <React.Fragment>
+                <Navbar _logoUrl={"./images/logo.svg"}
+                    _navMenu={this.menu} />
+                <Header />
+                <Services />
+                <Productive />
+                <Testimonial />
+                <Footer _ftMenu={this._ftMenu} />
+            </React.Fragment>
+        )
     }
 
 }

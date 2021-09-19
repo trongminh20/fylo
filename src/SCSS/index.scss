@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
-
+@import "./reset.scss";
 @import "./variables.scss";
 @import "./mixin.scss";
 @import "./button.scss";
@@ -9,12 +9,3 @@
 @import "./header.scss";
 @import "./form.scss";
 @import "./footer.scss";
-
-.header {
-    font-family: "Open Sans", sans-serif;
-}
-
-.listOfInput {
-    display: flex;
-    flex-direction: column;
-}

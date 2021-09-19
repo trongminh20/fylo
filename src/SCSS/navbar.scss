@@ -1,0 +1,26 @@
+.nav {
+    width: 100%;
+    height: 4rem;
+    background-color: $main--background;
+    @include flexDisplay(row, 0, space-between, center);
+    position: fixed;
+    top: 0px;
+    &Logo {
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        img {
+            width: 5rem;
+        }
+    }
+    &Menu {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        @include flexDisplay(row, 2rem, center, center);
+        li a {
+            text-decoration: none;
+            color: $white;
+        }
+    }
+}

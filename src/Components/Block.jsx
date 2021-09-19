@@ -5,6 +5,7 @@ export default class Block extends Component {
 
     constructor(props) {
         super(props);
+        this._class = this.props._class;
         this._imgUrl = this.props._imgUrl;
         this._subHeader = this.props._subHeader;
         this._title = this.props._title;
@@ -16,11 +17,14 @@ export default class Block extends Component {
         this._authorProfileUrl = this.props._authorProfileUrl;
         this._authorName = this.props._authorName;
         this._authorPosition = this.props._authorPosition;
+        this._link = this.props._link;
+        this._linkContent = this.props._linkContent;
     }
 
     render() {
         return (
-            <section className="block">
+            <article className={"block " + this._class}>
+                <img src={this._imgUrl} alt="" />
                 <h1 className="blockTitle">
                     {this._title}
                 </h1>
@@ -48,7 +52,8 @@ export default class Block extends Component {
                 {
                     (this._form === true) ? <Form /> : ""
                 }
-            </section>
+                <a href={this._link}>{this._linkContent}</a>
+            </article>
         )
     }
 

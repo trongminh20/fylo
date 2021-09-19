@@ -5,10 +5,16 @@ export default class Footer extends Component {
     constructor(props) {
         super(props);
     }
+    footerIco = {
 
+    }
     render() {
-        return <footer>
-            <section className="footerIntro"></section>
+        return <footer className="footer">
+            <section className="footerIntro">
+                <img className="footerLogo" src="./images/logo.svg" alt="" />
+                <Icon _icoFontAwesome={""}
+                    _content={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"} />
+            </section>
             <section className="contact">
                 <Icon _icoFontawesome={"fas fa-phone-volume"} _content={'+1 543-123-4567'} />
                 <Icon _icoFontawesome={"fas fa-envelope"} _content={'example@fylo.com'} />
@@ -22,7 +28,11 @@ export default class Footer extends Component {
                     }
                 </ul>
             </section>
-            <section className="socialLinks"></section>
+            <section className="socialLinks">
+                <Icon _icoFontAwesome={""} />
+                <Icon _icoFontAwesome={""} />
+                <Icon _icoFontAwesome={""} />
+            </section>
         </footer>
     }
 }

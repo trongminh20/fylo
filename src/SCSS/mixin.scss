@@ -3,7 +3,7 @@
     flex-direction: $direction;
     justify-content: $justify;
     align-items: $align;
-    @if $direction == column or $rection == column-reverse {
+    @if $direction == column or $direction == column-reverse {
         row-gap: $gap;
     } @else if $direction == row or $direction == row-reverse {
         column-gap: $gap;
