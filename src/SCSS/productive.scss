@@ -2,6 +2,8 @@
     margin-top: 3rem;
     @include flexDisplay(column, 1rem, center, center);
     width: 100%;
+    margin-bottom: 20vh;
+
     @media (min-width: $laptop--resolution) {
         @include flexDisplay(row, 4rem, center, center);
         width: 80%;

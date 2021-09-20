@@ -6,6 +6,7 @@
     z-index: 0;
     display: flex;
     justify-content: center;
+    margin-bottom: 20vh;
     &Bg {
         position: absolute;
         z-index: 1;
@@ -13,7 +14,7 @@
         width: 100%;
     }
     @media (min-width: $laptop--resolution) {
-        margin-bottom: 10vh;
+        margin-bottom: 20vh;
     }
     .headerIntro {
         @include flexDisplay(column, 1rem, center, center);
@@ -24,7 +25,7 @@
         @media (min-width: $laptop--resolution) {
             width: 50%;
             top: 15vh;
-            row-gap: 1.5rem;
+            row-gap: 1rem;
         }
         .blockImg {
             z-index: 2;

@@ -24,7 +24,7 @@
         }
 
         .subform {
-            @include flexDisplay(column, 2rem, center, center);
+            @include flexDisplay(column, 1rem, center, center);
 
             .blockContent {
                 width: 95%;

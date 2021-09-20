@@ -3,12 +3,14 @@
     width: 100%;
     height: 100vh;
     margin-top: 5vh;
-    margin-bottom: 4rem;
+    margin-bottom: 30vh;
+
     @media (min-width: $laptop--resolution) {
         @include flexDisplay(row, 1rem, center, center);
         width: 90%;
         height: 50vh;
         margin-top: 2vh;
+        margin-bottom: 20vh;
     }
     &Item {
         margin-top: 5vh;
