@@ -24,7 +24,7 @@ export default class Block extends Component {
     render() {
         return (
             <article className={"block " + this._class}>
-                <img src={this._imgUrl} alt="" />
+                <img className="blockImg" src={this._imgUrl} alt="" />
                 <h1 className="blockTitle">
                     {this._title}
                 </h1>
@@ -40,8 +40,10 @@ export default class Block extends Component {
                 {(this._isTestimonial == true) ?
                     <div className="author">
                         <img src={this._authorProfileUrl} alt="author profile" />
-                        <p>{this._authorName}</p>
-                        <p>{this._authorPosition}</p>
+                        <div className="authorInfo">
+                            <p className="authorName">{this._authorName}</p>
+                            <p className="authorPosition">{this._authorPosition}</p>
+                        </div>
                     </div> : ""
                 }
 

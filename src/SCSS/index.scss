@@ -1,11 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
 @import "./reset.scss";
 @import "./variables.scss";
 @import "./mixin.scss";
+@import "./block.scss";
 @import "./button.scss";
 @import "./navbar.scss";
 @import "./header.scss";
 @import "./form.scss";
 @import "./footer.scss";
+@import "./services.scss";
+@import "./productive.scss";
+@import "./testimonial.scss";
+body {
+    color: $white;
+    font-family: "Open Sans", sans-serif;
+}
+#root {
+    @include flexDisplay(column, 0, flex-start, center);
+    overflow: hidden;
+    background-color: $main--background;
+}
+.blockTitle {
+    font-family: "Raleway", sans-serif;
+}
+p {
+    line-height: 1.5;
+}

@@ -1,0 +1,11 @@
+.btn {
+    background: linear-gradient(50deg, $cyan 30%, $blue 70%);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font: bolder;
+    @media (max-width: $mobile--resolution) {
+        width: 70%;
+        height: 2rem;
+    }
+}

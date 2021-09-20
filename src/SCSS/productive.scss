@@ -1,0 +1,13 @@
+.productive {
+    margin-top: 3rem;
+    @include flexDisplay(column, 1rem, center, center);
+    width: 100%;
+
+    .block {
+        width: 90%;
+        &Img {
+            margin: auto;
+            width: 100%;
+        }
+    }
+}

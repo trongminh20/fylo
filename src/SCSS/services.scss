@@ -1,0 +1,15 @@
+.services {
+    @include flexDisplay(column, 1rem, center, center);
+    width: 70%;
+    margin: auto;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+
+    .block {
+        justify-content: center;
+        align-items: center;
+        &Content {
+            text-align: center;
+        }
+    }
+}

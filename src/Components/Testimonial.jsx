@@ -12,6 +12,7 @@ export default class Testimonial extends Component {
                 testimonials.map(t => {
                     return <Block _class={"testimonialItem"} _isTestimonial={true}
                         _content={t.review}
+                        _authorProfileUrl={t.profileImg}
                         _authorName={t.author}
                         _authorPosition={t.position} />
                 })
