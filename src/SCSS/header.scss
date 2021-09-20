@@ -48,8 +48,11 @@
             }
         }
         .blockBtn {
-            width: 50%;
+            @media (min-width: $laptop--resolution) {
+                width: 70%;
+            }
             height: 3rem;
+            width: 100%;
         }
     }
 }
