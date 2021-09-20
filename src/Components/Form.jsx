@@ -8,7 +8,7 @@ export default class Form extends Component {
     }
 
     render() {
-        return <form>
+        return <form className="form">
             <input type="text" placeholder="Example@example.com" />
             <Button _class={"formBtn"} _value={"Get Started For Free"} _function={console.log("form was submitted")} />
         </form>
