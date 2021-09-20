@@ -12,16 +12,43 @@
         bottom: 0px;
         width: 100%;
     }
-
+    @media (min-width: $laptop--resolution) {
+        margin-bottom: 10vh;
+    }
     .headerIntro {
         @include flexDisplay(column, 1rem, center, center);
         z-index: 2;
         position: absolute;
         top: 30vh;
-        width: 80%;
+        width: 60%;
+        @media (min-width: $laptop--resolution) {
+            width: 50%;
+            top: 15vh;
+            row-gap: 1.5rem;
+        }
         .blockImg {
             z-index: 2;
             width: 100%;
+            @media (min-width: $laptop--resolution) {
+                width: 70%;
+            }
+        }
+
+        .blockTitle {
+            @media (min-width: $laptop--resolution) {
+                text-align: center;
+                font-size: 2rem;
+            }
+        }
+        .blockContent {
+            @media (min-width: $laptop--resolution) {
+                width: 80%;
+                text-align: center;
+            }
+        }
+        .blockBtn {
+            width: 50%;
+            height: 3rem;
         }
     }
 }

@@ -1,38 +1,60 @@
 .footer {
     background-color: $footer--background;
-    @include flexDisplay(column, 1rem, flex-start, flex-start);
     width: 100%;
-    height: 80vh;
-    margin-top: 15vh;
+    margin-top: 25vh;
     position: relative;
+    @media (min-width: $laptop--resolution) {
+        @include flexDisplay(row, 2rem, center, center);
+        height: 40vh;
+    }
+    @media (max-width: $mobile--resolution) {
+        @include flexDisplay(column, 2rem, flex-start, flex-start);
+    }
     .footerForm {
         position: absolute;
         background-color: $signup--background;
         border-radius: 10px;
         width: 90%;
         left: 5%;
-        bottom: 40rem;
+        bottom: 80%;
+        @media (min-width: $laptop--resolution) {
+            width: 40%;
+            left: 30%;
+            bottom: 70%;
+        }
+
         .subform {
-            @include flexDisplay(column, 1rem, center, center);
+            @include flexDisplay(column, 2rem, center, center);
+
             .blockContent {
                 width: 95%;
             }
             .blockTitle {
                 font-weight: bolder;
             }
+            .blockContent {
+                text-align: center;
+            }
             .form {
-                @include flexDisplay(row, 1rem, center, flex-start);
+                @include flexDisplay(column, 1rem, center, flex-start);
+                @media (min-width: $laptop--resolution) {
+                    @include flexDisplay(row, 1rem, center, center);
+                }
 
                 width: 90%;
                 input {
                     width: 100%;
-                    height: 2rem;
+                    height: 3rem;
                     border: none;
                     border-radius: 25px;
                 }
                 .formBtn {
-                    width: 70%;
+                    width: 100%;
+                    @media (min-width: $laptop--resolution) {
+                        width: 70%;
+                    }
                     font-weight: bolder;
+                    height: 3rem;
                 }
             }
         }
@@ -43,24 +65,53 @@
     &Social {
         width: 90%;
         margin: auto;
+        height: 50%;
+    }
+    .iconItems {
+        margin-left: 1rem;
     }
     &Intro {
-        margin-top: 12rem;
-        @include flexDisplay(column, 1rem, center, center);
+        @include flexDisplay(column, 2rem, center, center);
+        @media (max-width: $mobile--resolution) {
+            margin-top: 12rem;
+        }
     }
     &Logo {
         width: 30%;
     }
+    &Contact {
+        @media (min-width: $laptop--resolution) {
+            @include flexDisplay(column, 1rem, center, flex-start);
+            margin-top: 6rem;
+            margin-left: 2rem;
+        }
+    }
     .navMenu {
         @include flexDisplay(column, 0.5rem, flex-start, flex-start);
+        margin-left: 1rem;
+        @media (min-width: $laptop--resolution) {
+            @include gridDisplay(2, 50%, 1, auto, 1rem, 1rem);
+            justify-content: center;
+            align-items: center;
+            margin-top: 4rem;
+        }
+
+        li a {
+            &:hover {
+                font-weight: bolder;
+            }
+        }
     }
     &Social {
         margin-bottom: 2rem;
-        @include flexDisplay(row, 1rem, flex-start, center);
+        @include flexDisplay(row, 2rem, center, center);
         .iconItems {
             width: 1.5rem;
             i {
                 color: $white;
+                &:hover {
+                    color: $cyan;
+                }
             }
         }
     }

@@ -4,12 +4,25 @@
     margin: auto;
     margin-top: 5rem;
     margin-bottom: 2rem;
-
+    @media (min-width: $laptop--resolution) {
+        margin-top: 10vh;
+        @include gridDisplay(2, 40%, 2, 30vh, 1rem, 1rem);
+        margin-top: 5vh;
+        width: 80%;
+    }
     .block {
         justify-content: center;
         align-items: center;
         &Content {
             text-align: center;
+        }
+
+        @media (min-width: $laptop--resolution) {
+            margin: auto;
+            .blockImg {
+                width: 6rem;
+                height: 5rem;
+            }
         }
     }
 }

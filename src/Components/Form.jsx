@@ -9,7 +9,7 @@ export default class Form extends Component {
 
     render() {
         return <form className="form">
-            <input type="text" placeholder="Example@example.com" />
+            <input type="email" placeholder="Example@example.com" required="required" />
             <Button _class={"formBtn"} _value={"Get Started For Free"} _function={console.log("form was submitted")} />
         </form>
     }
